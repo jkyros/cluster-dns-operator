@@ -27,7 +27,8 @@ const (
 	// entries should be added to /etc/hosts.  NOTE: For now, ensure these
 	// are relative names; for each relative name, an alias with the
 	// CLUSTER_DOMAIN suffix will also be added.
-	services = "image-registry.openshift-image-registry.svc"
+	// TODO(jkyros): I kind of want to expose this as a configmap, but then a controller would have to watch it, etc, it'd be expensive
+	services = "image-registry.openshift-image-registry.svc,rhel-coreos-8-ext.machine-config-operator.svc"
 
 	// workloadPartitioningManagement contains the management workload annotation
 	workloadPartitioningManagement = "target.workload.openshift.io/management"
